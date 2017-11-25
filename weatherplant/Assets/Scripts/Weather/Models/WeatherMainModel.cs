@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace WeatherPlant.Service
+namespace WeatherPlant.Weather.Models
 {
-    public class WeatherMain
+    public class WeatherMainModel
     {
         [JsonProperty("temp")]
         private float _temp;

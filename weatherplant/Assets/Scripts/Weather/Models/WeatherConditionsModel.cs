@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace WeatherPlant.Service
+namespace WeatherPlant.Weather.Models
 {
-    public class WeatherConditions
+    public class WeatherConditionsModel
     {
         [JsonProperty("id")]
         private int _id;

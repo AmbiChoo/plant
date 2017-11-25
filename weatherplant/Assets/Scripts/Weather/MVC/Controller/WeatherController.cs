@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
+using WeatherPlant.Weather.Models;
+using WeatherPlant.Weather.ViewModel;
+using WeatherPlant.Service;
 
-namespace WeatherPlant.Service
+namespace WeatherPlant.Weather.Controller
 {
     public class WeatherController : MonoBehaviour
     {
         [SerializeField]
-        private WeatherModel _model;
+        private WeatherViewModel _model;
         private WeatherService _service;
 
         private void Awake()
@@ -19,7 +22,7 @@ namespace WeatherPlant.Service
             _service.GetWeather(UpdateModel);
         }
 
-        private void UpdateModel(Weather data)
+        private void UpdateModel(WeatherModel data)
         {
             _model.Model = data;
         }
@@ -30,7 +33,7 @@ namespace WeatherPlant.Service
                 return;
 
             Debug.LogWarning("Weather model is null. Searching for one");
-            _model = FindObjectOfType<WeatherModel>();
+            _model = FindObjectOfType<WeatherViewModel>();
             if (_model != null)
                 return;
 

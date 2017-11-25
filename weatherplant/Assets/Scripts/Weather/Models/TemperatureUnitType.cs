@@ -1,5 +1,5 @@
 ﻿
-namespace WeatherPlant.Service
+namespace WeatherPlant.Weather.Models
 {
     public enum TemperatureUnitType
     {

@@ -1,21 +1,23 @@
 ﻿using System;
 using UnityEngine;
+using WeatherPlant.Weather.Models;
+using WeatherPlant.Weather.Controller;
 
-namespace WeatherPlant.Service
+namespace WeatherPlant.Weather.ViewModel
 {
-    public class WeatherModel : MonoBehaviour
+    public class WeatherViewModel : MonoBehaviour
     {
         [SerializeField]
         private WeatherUnityEvent _onModelUpdate;
-        private Weather _currentModel;
+        private WeatherModel _currentModel;
 
-        public event Action<Weather> OnModelUpdate;
+        public event Action<WeatherModel> OnModelUpdate;
 
         /// <summary>
         /// Gets or sets the current Weather model
         /// </summary>
         /// <value>The model.</value>
-        public Weather Model
+        public WeatherModel Model
         {
             get { return _currentModel; }
             set

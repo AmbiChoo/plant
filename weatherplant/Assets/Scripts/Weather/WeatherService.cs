@@ -6,6 +6,7 @@ using System.Threading;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
+using WeatherPlant.Weather.Models;
 
 namespace WeatherPlant.Service
 {
@@ -14,14 +15,14 @@ namespace WeatherPlant.Service
         private class Request
         {
             public bool IsComplete;
-            public Action<Weather> Callback;
-            public Weather Data;
+            public Action<WeatherModel> Callback;
+            public WeatherModel Data;
             public Thread RequestThread;
         }
 
         private Queue<Request> _queue = new Queue<Request>();
 
-        public void GetWeather(Action<Weather> callback)
+        public void GetWeather(Action<WeatherModel> callback)
         {
             var request = new Request()
             {
@@ -45,7 +46,7 @@ namespace WeatherPlant.Service
             var streamReader = new StreamReader(responseStream, Encoding.UTF8);
 
             var data = streamReader.ReadToEnd();
-            var parsedData = JsonConvert.DeserializeObject<Weather>(data);
+            var parsedData = JsonConvert.DeserializeObject<WeatherModel>(data);
 
             // Check request
             var request = _queue.Peek();

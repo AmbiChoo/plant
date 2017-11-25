@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using WeatherPlant.Weather.Models;
+using WeatherPlant.Weather.ViewModel;
 
-namespace WeatherPlant.Service
+namespace WeatherPlant.Weather.View
 {
     public class CurrentTemperatureView : MonoBehaviour
     {
         [SerializeField]
-        private WeatherModel _model;
+        private WeatherViewModel _model;
         [SerializeField]
         private TemperatureUnitType _units;
         [SerializeField]
@@ -22,7 +24,7 @@ namespace WeatherPlant.Service
             _model.OnModelUpdate -= UpdateView;
         }
 
-        private void UpdateView(Weather data)
+        private void UpdateView(WeatherModel data)
         {
             UpdateView(data.Temperature.Temperature);
         }

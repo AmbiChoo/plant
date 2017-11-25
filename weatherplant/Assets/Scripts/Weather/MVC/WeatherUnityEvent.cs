@@ -1,10 +1,11 @@
 ﻿using System;
 using UnityEngine.Events;
+using WeatherPlant.Weather.Models;
 
-namespace WeatherPlant.Service
+namespace WeatherPlant.Weather.Controller
 {
     [Serializable]
-    public class WeatherUnityEvent : UnityEvent<Weather>
+    public class WeatherUnityEvent : UnityEvent<WeatherModel>
     {
     }
 }
