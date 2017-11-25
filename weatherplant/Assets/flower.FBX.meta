@@ -20,6 +20,9 @@ ModelImporter:
     100024: Plane001
     100026: Cylinder002
     100028: Object001
+    100030: Sphere001
+    100032: Cylinder003
+    100034: leaf
     400000: Cylinder001
     400002: //RootNode
     400004: Line001
@@ -35,6 +38,9 @@ ModelImporter:
     400024: Plane001
     400026: Cylinder002
     400028: Object001
+    400030: Sphere001
+    400032: Cylinder003
+    400034: leaf
     2300000: Cylinder001
     2300002: Line001
     2300004: Line002
@@ -49,6 +55,9 @@ ModelImporter:
     2300022: Plane001
     2300024: Cylinder002
     2300026: Object001
+    2300028: Sphere001
+    2300030: Cylinder003
+    2300032: leaf
     3300000: Cylinder001
     3300002: Line001
     3300004: Line002
@@ -63,6 +72,9 @@ ModelImporter:
     3300022: Plane001
     3300024: Cylinder002
     3300026: Object001
+    3300028: Sphere001
+    3300030: Cylinder003
+    3300032: leaf
     4300000: Line001
     4300002: Line002
     4300004: Line003
@@ -77,6 +89,9 @@ ModelImporter:
     4300022: Cylinder001
     4300024: Cylinder002
     4300026: Object001
+    4300028: Sphere001
+    4300030: Cylinder003
+    4300032: leaf
     9500000: //RootNode
   materials:
     importMaterials: 0
