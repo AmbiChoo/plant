@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4708823397952200}
   - component: {fileID: 95709837538346314}
   m_Layer: 0
-  m_Name: Flower_04
+  m_Name: Flower_1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,7 +372,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1524238906203932}
-  m_LocalRotation: {x: -0.31577942, y: 0.6326796, z: 0.6326796, w: 0.31577942}
+  m_LocalRotation: {x: -0.3157794, y: 0.6326795, z: 0.6326795, w: 0.3157794}
   m_LocalPosition: {x: 0.0021432799, y: -0.3241, z: -0.0068181884}
   m_LocalScale: {x: 0.58538526, y: 0.585386, z: 0.64811355}
   m_Children: []
