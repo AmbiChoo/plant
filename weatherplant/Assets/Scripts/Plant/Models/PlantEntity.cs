@@ -14,6 +14,18 @@ namespace WeatherPlant.Plant.Entity
         private int _currentStage;
         private PlantModel _baseModel;
 
+        public PlantEntity()
+        {
+            // Nothig
+        }
+
+        public PlantEntity(DateTime plantDate, int plantID, int stage)
+        {
+            _plantDate = plantDate;
+            _plantID = plantID;
+            _currentStage = stage;
+        }
+
         public DateTime PlantDate
         {
             get { return _plantDate; }
@@ -27,6 +39,7 @@ namespace WeatherPlant.Plant.Entity
         public int CurrentStage
         {
             get { return _currentStage; }
+            set { _currentStage = value; }
         }
 
         public PlantModel BaseModel

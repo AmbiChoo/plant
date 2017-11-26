@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
-using WeatherPlant.Plant.Models;
+using WeatherPlant.Plant.Entity;
 using WeatherPlant.Plant.ViewModel;
 using WeatherPlant.BaseMVC;
 
 namespace WeatherPlant.Plant.View
 {
-    public class PlantView : BaseView<PlantModel, PlantViewModel>
+    public class PlantEntityView : BaseView<PlantEntity, PlantEntityViewModel>
     {
+
         private GameObject _instance;
 
-        protected override void UpdateView(PlantModel data)
+        protected override void UpdateView(PlantEntity data)
         {
             DestroyInstance();
 
@@ -17,7 +18,7 @@ namespace WeatherPlant.Plant.View
                 return;
 
             // Create Instance
-            var loadingResource = string.Format("{0}_{1}_{2}", data.Type, data.ID, data.Stages.Count - 1);
+            var loadingResource = string.Format("{0}_{1}_{2}", data.BaseModel.Type, data.PlantID, data.CurrentStage);
             var prefab = Resources.Load(loadingResource) as GameObject;
             if (prefab == null)
             {

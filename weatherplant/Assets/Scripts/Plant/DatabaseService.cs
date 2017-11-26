@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using WeatherPlant.Plant.Models;
 using WeatherPlant.Plant.Entity;
@@ -21,20 +22,22 @@ namespace WeatherPlant.Database
 
         public PlantEntity LoadCurrentPlant()
         {
+            PlantEntity entity = null;
             if (!File.Exists(CurrentPlant))
             {
-                UnityEngine.Debug.LogFormat("File not found {0}", CurrentPlant);
-                return null;
+                entity = new PlantEntity(DateTime.Now, 1, 0);
             }
-
-            var rawData = File.ReadAllText(CurrentPlant);
-            var data = JsonConvert.DeserializeObject<PlantEntity>(rawData);
+            else
+            {
+                var rawData = File.ReadAllText(CurrentPlant);
+                entity = JsonConvert.DeserializeObject<PlantEntity>(rawData);
+            }
 
             // Assign Plant
             var plants = LoadPlants();
-            data.BaseModel = plants[data.PlantID];
+            entity.BaseModel = plants[entity.PlantID];
 
-            return data;
+            return entity;
         }
     }
 }

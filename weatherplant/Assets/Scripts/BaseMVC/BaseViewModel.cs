@@ -39,6 +39,11 @@ namespace WeatherPlant.BaseMVC
             }
         }
 
+        public void Refresh()
+        {
+            TriggerModelUpdate(_currentModel);
+        }
+
         protected virtual void SetModel(M model)
         {
             _currentModel = model;
