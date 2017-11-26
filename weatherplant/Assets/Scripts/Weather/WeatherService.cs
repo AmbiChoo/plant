@@ -39,19 +39,26 @@ namespace WeatherPlant.Service
 
         private void ProcessRequest()
         {
-            var httpRequest = (HttpWebRequest)WebRequest.Create("https://api.openweathermap.org/data/2.5/weather?zip=94030,us&appid=88eac2195d58d6259219d1224bfb43b8");
+            try
+            {
+                var httpRequest = (HttpWebRequest)WebRequest.Create("https://api.openweathermap.org/data/2.5/weather?zip=94030,us&appid=88eac2195d58d6259219d1224bfb43b8");
 
-            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-            var responseStream = httpResponse.GetResponseStream();
-            var streamReader = new StreamReader(responseStream, Encoding.UTF8);
+                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+                var responseStream = httpResponse.GetResponseStream();
+                var streamReader = new StreamReader(responseStream, Encoding.UTF8);
 
-            var data = streamReader.ReadToEnd();
-            var parsedData = JsonConvert.DeserializeObject<WeatherModel>(data);
+                var data = streamReader.ReadToEnd();
+                var parsedData = JsonConvert.DeserializeObject<WeatherModel>(data);
 
-            // Check request
-            var request = _queue.Peek();
-            request.Data = parsedData;
-            request.IsComplete = true;
+                // Check request
+                var request = _queue.Peek();
+                request.Data = parsedData;
+                request.IsComplete = true;
+            }
+            catch (Exception e)
+            {
+                Debug.LogErrorFormat("Error getting data: {0}", e.Message);
+            }
         }
 
         private void Update()
