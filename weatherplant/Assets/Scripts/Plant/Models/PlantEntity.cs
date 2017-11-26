@@ -10,6 +10,8 @@ namespace WeatherPlant.Plant.Entity
         private DateTime _plantDate;
         [JsonProperty("plant_id")]
         private int _plantID;
+        [JsonProperty("current_stage")]
+        private int _currentStage;
         private PlantModel _baseModel;
 
         public DateTime PlantDate
@@ -20,6 +22,11 @@ namespace WeatherPlant.Plant.Entity
         public int PlantID
         {
             get { return _plantID; }
+        }
+
+        public int CurrentStage
+        {
+            get { return _currentStage; }
         }
 
         public PlantModel BaseModel

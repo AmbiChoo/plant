@@ -2,29 +2,18 @@
 using UnityEngine.UI;
 using WeatherPlant.Weather.Models;
 using WeatherPlant.Weather.ViewModel;
+using WeatherPlant.BaseMVC;
 
 namespace WeatherPlant.Weather.View
 {
-    public class CurrentTemperatureView : MonoBehaviour
+    public class CurrentTemperatureView : BaseView<WeatherModel, WeatherViewModel>
     {
-        [SerializeField]
-        private WeatherViewModel _model;
         [SerializeField]
         private TemperatureUnitType _units;
         [SerializeField]
         private Text _text;
 
-        private void OnEnable()
-        {
-            _model.OnModelUpdate += UpdateView;
-        }
-
-        private void OnDisable()
-        {
-            _model.OnModelUpdate -= UpdateView;
-        }
-
-        private void UpdateView(WeatherModel data)
+        protected override void UpdateView(WeatherModel data)
         {
             UpdateView(data.Temperature.Temperature);
         }

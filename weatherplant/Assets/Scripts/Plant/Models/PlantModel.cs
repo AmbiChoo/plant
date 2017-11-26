@@ -10,7 +10,7 @@ namespace WeatherPlant.Plant.Models
         [JsonProperty("type")]
         private string _type;
         [JsonProperty("stages")]
-        private List<PlantStage> _stages;
+        private List<PlantStageModel> _stages;
 
         public int ID
         {
@@ -22,7 +22,7 @@ namespace WeatherPlant.Plant.Models
             get { return _type; }
         }
 
-        public List<PlantStage> Stages
+        public List<PlantStageModel> Stages
         {
             get { return _stages; }
         }

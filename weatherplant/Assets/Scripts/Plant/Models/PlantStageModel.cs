@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace WeatherPlant.Plant.Models
 {
-    public class PlantStage
+    public class PlantStageModel
     {
         [JsonProperty("stage_span")]
         private TimeSpan _stageSpan;
