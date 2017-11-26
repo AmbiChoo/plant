@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32cecb28197d44a91b3032b1e65ccf74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _model: {fileID: 114824538147970716}
+  _viewModel: {fileID: 0}
   _units: 1
   _text: {fileID: 114336728392235478}
 --- !u!114 &114824538147970716
@@ -183,8 +183,8 @@ MonoBehaviour:
   _onModelUpdate:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: WeatherPlant.Service.WeatherUnityEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: WeatherPlant.Weather.Controller.WeatherUnityEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!222 &222250998575037616
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -54,7 +54,6 @@ namespace WeatherPlant.Plant.Controller
                 {
                     model.CurrentStage = i;
                     _model.Refresh();
-                    Debug.LogFormat("New Stage: {0}", i);
                 }
                 return;
             }
