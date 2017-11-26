@@ -4,19 +4,34 @@
         "type": "Flower",
         "stages": [
             {
-                "stage_span": "0.00:00:10"
+                "stage_span": "0.00:00:5"
             },
             {
-                "stage_span": "0.00:00:20"
+                "stage_span": "0.00:00:5"
             },
             {
-                "stage_span": "0.00:00:30"
+                "stage_span": "0.00:00:5"
             },
             {
-                "stage_span": "0.00:00:40"
+                "stage_span": "0.00:00:5"
             },
             {
-                "stage_span": "0.00:00:50"
+                "stage_span": "0.00:00:5"
+            },
+            {
+                "stage_span": "0.00:00:5"
+            },
+            {
+                "stage_span": "0.00:00:5"
+            },
+            {
+                "stage_span": "0.00:00:5"
+            },
+            {
+                "stage_span": "0.00:00:5"
+            },
+            {
+                "stage_span": "0.00:00:5"
             }
         ]
     }
