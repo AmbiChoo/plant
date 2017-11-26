@@ -59,6 +59,7 @@ namespace WeatherPlant.Weather.View
                 }
             }
 
+            Debug.LogWarningFormat("Could not find weather condition id [{0}]", id);
             return null;
         }
     }

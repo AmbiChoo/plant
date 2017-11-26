@@ -39,7 +39,7 @@ namespace WeatherPlant.Service
 
         private void ProcessRequest()
         {
-            var httpRequest = (HttpWebRequest)WebRequest.Create("http://samples.openweathermap.org/data/2.5/weather?zip=94030,us&appid=88eac2195d58d6259219d1224bfb43b8");
+            var httpRequest = (HttpWebRequest)WebRequest.Create("https://api.openweathermap.org/data/2.5/weather?zip=94030,us&appid=88eac2195d58d6259219d1224bfb43b8");
 
             var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
             var responseStream = httpResponse.GetResponseStream();
